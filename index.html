@@ -4,256 +4,390 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>SKYLUX</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
+  <!-- NAVBAR (igual al index) -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-danger">
     <div class="container-fluid bg-warning">
-      <a class="navbar-brand" href="#" img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30"
-        height="30"><img src="logo1.png" alt="" width="40" height="40" class="me-2 rounded-circle">
-      SKYLUX</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <img src="logo1.png" alt="" width="40" height="40" class="me-2 rounded-circle"> SKYLUX
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav" >
-        <ul class="navbar-nav ">
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="agendas.html">Agendas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="videos.html">Videos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="imagenes.html">Imagenes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="nosotros.html">Nosotros</a>
-          </li>
+    <button id="btnLogin" class="btn-red ms-3">Iniciar Sesión / Registrarse</button>
+</li>
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="agendas.html">Agendas</a></li>
+          <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="imagenes.html">Imagenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
 
+
+  <!-- CAROUSEL -->
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
     </div>
+
     <div class="carousel-inner">
       <div class="carousel-item active" style="max-height: 500px;">
-        <img src="logo.png" class="d-block w-100" alt="...">
+        <img src="logo.png" class="d-block w-100" alt="">
       </div>
+
       <div class="carousel-item" style="max-height: 500px;">
-        <img src="logo1.png" class="d-block w-100" alt="...">
+        <img src="logo1.png" class="d-block w-100" alt="">
       </div>
+
       <div class="carousel-item" style="max-height: 500px;">
-        <img src="logo2.png" class="d-block w-100" alt="...">
+        <img src="logo2.png" class="d-block w-100" alt="">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
     </button>
   </div>
 
 
-<div class="container-fluid bg-warning-subtle py-4 text-center">
-  <div class="container">
-    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 align-items-center justify-content-center">
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.ritzcarlton.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">The Ritz-Carlton</h6>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.fourseasons.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">Four Seasons</h6>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.mandarinoriental.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">Mandarin Oriental</h6>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.marriott.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">Marriott</h6>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.hilton.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">Hilton</h6>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-items-center">
-        <a href="https://www.hyatt.com" target="_blank" class="text-decoration-none">
-          <div class="border rounded px-3 py-2 bg-dark shadow-sm">
-            <h6 class="mb-0 text-warning">Hyatt</h6>
-          </div>
-        </a>
+  <!-- LOGOS DE HOTELES -->
+  <div class="container-fluid bg-warning-subtle py-4 text-center">
+    <div class="container">
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 align-items-center justify-content-center">
+
+        <div class="col"><a href="https://www.ritzcarlton.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">The Ritz-Carlton</h6>
+            </div>
+          </a></div>
+
+        <div class="col"><a href="https://www.fourseasons.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">Four Seasons</h6>
+            </div>
+          </a></div>
+
+        <div class="col"><a href="https://www.mandarinoriental.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">Mandarin Oriental</h6>
+            </div>
+          </a></div>
+
+        <div class="col"><a href="https://www.marriott.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">Marriott</h6>
+            </div>
+          </a></div>
+
+        <div class="col"><a href="https://www.hilton.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">Hilton</h6>
+            </div>
+          </a></div>
+
+        <div class="col"><a href="https://www.hyatt.com" target="_blank" class="text-decoration-none">
+            <div class="border rounded px-3 py-2 bg-dark shadow-sm">
+              <h6 class="mb-0 text-warning">Hyatt</h6>
+            </div>
+          </a></div>
+
       </div>
     </div>
+  </div>
+
+
+<!-- QUIÉNES SOMOS DINÁMICO -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">QUIÉNES SOMOS <i class="bi bi-search"></i></h2>
+
+  <div class="row g-4 text-center">
+
+    <!-- CARD 1: Misión -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-bullseye display-4 text-warning mb-3"></i>
+          <h5 class="card-title">Nuestra Misión</h5>
+          <p class="card-text">Brindar soluciones tecnológicas innovadoras para el sector hotelero, garantizando eficiencia y satisfacción para nuestros clientes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: Visión -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-eye display-4 text-warning mb-3"></i>
+          <h5 class="card-title">Nuestra Visión</h5>
+          <p class="card-text">Ser líderes en innovación hotelera, ofreciendo experiencias únicas y exclusivas que marquen la diferencia en el mercado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Valores -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-stars display-4 text-warning mb-3"></i>
+          <h5 class="card-title">Nuestros Valores</h5>
+          <p class="card-text">Compromiso, excelencia y atención personalizada en cada servicio que ofrecemos, asegurando la satisfacción total de nuestros clientes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Botón modal para más información -->
+  <div class="text-center mt-4">
+    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalNosotros">
+      Saber más de nosotros
+    </button>
   </div>
 </div>
 
 
-  <div class="container mt-5">
-    <h2 class="text-center"> QUIENES SOMOS <i class="bi bi-search"></i></h2>
+
+  <!-- CARDS -->
+  <div class="container mt-5 d-none d-md-block">
     <div class="row">
-      <div class="col">
-        Somos una empresa dedicada a la hospitalidad y al servicio de alojamiento, con más de 10 años de experiencia en el sector hotelero. Nos especializamos en brindar experiencias únicas a nuestros huéspedes, ofreciendo siempre instalaciones de calidad y atención personalizada.
-      </div>
-      <div class="col">
-        Nuestra misión es brindar soluciones tecnológicas a nuestros clientes, ayudándolos a mejorar su productividad y eficiencia en sus negocios.
-        <br>
-      </div>
 
-
-      <button type="button" class="btn btn-outline-warning">Saber mas de nosotros</button>
-    </div>
-  </div>
-  </div>
-
-
-  <div class="container mt-5 d-none d-md-block ">
-    <div class="row">
+      <!-- CARD 1 -->
       <div class="col-md-4">
         <div class="card border-0 text-center">
-          <img src="interior 1.jpg" class="card-img-top rounded-circle" alt="Image description"
-            style="width: 150px; height: 150px; object-fit: cover;">
+          <img src="interior 1.jpg" class="card-img-top rounded-circle"
+            style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
-            <h5 class="card-title">PH</h5>
-            <p class="card-text">PH moderno y funcional ubicado en una zona residencial tranquila. Cuenta con espacios bien distribuidos, excelente iluminación natural y acceso a áreas comunes. Ideal para quienes buscan comodidad, seguridad y una comunidad organizada.</p>
-            <a href="#" class="btn btn-warning">Reservar</a>
+            <h5>PH</h5>
+            <p>PH moderno y funcional ubicado en una zona residencial tranquila. Cuenta con espacios bien distribuidos, excelente iluminación natural y acceso a áreas comunes. Ideal para quienes buscan comodidad, seguridad y una comunidad organizada.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
           </div>
         </div>
       </div>
 
+      <!-- CARD 2 -->
       <div class="col-md-4">
         <div class="card border-0 text-center">
-          <img src="interior 2.jpg" class="card-img-top rounded-circle" alt="Image description"
-            style="width: 150px; height: 150px; object-fit: cover;">
+          <img src="interior 2.jpg" class="card-img-top rounded-circle"
+            style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
-            <h5 class="card-title">PH JUNTO AL MAR</h5>
-            <p class="card-text">Exclusivo PH frente al mar, con impresionantes vistas panorámicas, acceso directo a la playa y diseño contemporáneo. Disfruta del sonido de las olas, amplios espacios, terraza privada y un estilo de vida relajado y sofisticado.</p>
-            <a href="#" class="btn btn-warning">Reservar</a>
+            <h5>PH JUNTO AL MAR</h5>
+            <p>Exclusivo PH frente al mar, con impresionantes vistas panorámicas, acceso directo a la playa y diseño contemporáneo. Disfruta del sonido de las olas, amplios espacios, terraza privada y un estilo de vida relajado y sofisticado.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
           </div>
         </div>
       </div>
 
+      <!-- CARD 3 -->
       <div class="col-md-4">
         <div class="card border-0 text-center">
-          <img src="interior 3.jpg" class="card-img-top rounded-circle" alt="Image description"
-            style="width: 150px; height: 150px; object-fit: cover;">
+          <img src="interior 3.jpg" class="card-img-top rounded-circle"
+            style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
-            <h5 class="card-title">HOTEL 5 ESTRELLAS</h5>
-            <p class="card-text">Hotel 5 estrellas de lujo, diseñado para ofrecer una experiencia inigualable. Disfruta de habitaciones elegantes, gastronomía de clase mundial, spa, piscina, gimnasio y atención personalizada en cada detalle. Perfecto para viajes de placer o negocios.</p>
-            <a href="#" class="btn btn-warning">Reservar</a>
+            <h5>HOTEL 5 ESTRELLAS</h5>
+            <p>Hotel 5 estrellas de lujo, diseñado para ofrecer una experiencia inigualable. Disfruta de habitaciones elegantes, gastronomía de clase mundial, spa, piscina, gimnasio y atención personalizada en cada detalle. Perfecto para viajes de placer o negocios.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
           </div>
         </div>
       </div>
+
     </div>
 
 
-    <div class="container mt-5 TE">
-      <div class="card mb-lg-3 border-0" style="max-width: 100%;">
+    <!-- CARD HORIZONTAL 1 -->
+    <div class="container mt-5">
+      <div class="card border-0">
         <div class="row g-0 align-items-center">
-          <div class="col-md-2">
-            <img src="entrando1.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
+          <div class="col-md-2"><img src="entrando1.jpg" class="img-fluid rounded-start"></div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Hoteles VIP SkyLux Boutique <i class="bi bi-gem"></i>
-</h5>
-              <p class="card-text">Ubicado en el corazón de la ciudad, SkyLux ofrece elegancia y privacidad en cada detalle. Rooftop con piscina infinita, gastronomía gourmet y atención VIP las 24 horas.</p>
-              <div class="text-center"><button type="button" class="btn btn-outline-warning">Reserva ya</button></div>
+              <h5>Hoteles VIP SkyLux Boutique <i class="bi bi-gem"></i></h5>
+              <p>Ubicado en el corazón de la ciudad, SkyLux ofrece elegancia y privacidad en cada detalle. Rooftop con piscina infinita, gastronomía gourmet y atención VIP las 24 horas.</p>
+              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reserva ya</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+
+    <!-- CARD HORIZONTAL 2 -->
     <div class="container mt-5">
-      <div class="card mb-3 border-0 text-center  ">
+      <div class="card border-0 text-center">
         <div class="row g-0">
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Hoteles VIP Maré Elite <i class="bi bi-gem"></i>
-</h5>
-              <p class="card-text">Exclusivo resort frente al mar, donde el lujo se encuentra con la tranquilidad. Suites con vista panorámica, spa de clase mundial y servicio personalizado para una experiencia inolvidable.</p>
-              <div class="text-center">
-                <button type="button" class="btn btn-outline-warning">Reserva ya</button>
-              </div>
+              <h5>Hoteles VIP Maré Elite <i class="bi bi-gem"></i></h5>
+              <p>Exclusivo resort frente al mar, donde el lujo se encuentra con la tranquilidad. Suites con vista panorámica, spa de clase mundial y servicio personalizado para una experiencia inolvidable.</p>
+              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reserva ya</button>
             </div>
           </div>
-          <div class="col-md-4">
-            <img src="entrando2.jpg" class="img-fluid rounded-end" alt="...">
-          </div>
+
+          <div class="col-md-4"><img src="entrando2.jpg" class="img-fluid rounded-end"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- LISTA DE RESERVAS -->
+  <div class="container mt-5">
+    <div class="card shadow-lg border-0">
+      <div class="card-header bg-warning text-center">
+        <h4 class="mb-0 text-dark"><i class="bi bi-journal-text"></i> Reservas Realizadas</h4>
+      </div>
+
+      <div class="card-body text-center">
+        <p class="text-muted">Aquí aparecerán las reservas que los clientes vayan enviando.</p>
+        <ul id="listaReservas" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="container-fluid bg-dark p-5 text-center text-white">
+    <div class="row">
+      <div class="col"><a href="agendas.html" class="text-warning text-decoration-none">AGENDAS</a></div>
+      <div class="col"><a href="videos.html" class="text-warning text-decoration-none">VIDEOS</a></div>
+      <div class="col"><a href="imagenes.html" class="text-warning text-decoration-none">IMAGENES</a></div>
+      <div class="col"><a href="contacto.html" class="text-warning text-decoration-none">CONTACTO</a></div>
+      <div class="col"><a href="nosotros.html" class="text-warning text-decoration-none">NOSOTROS</a></div>
+    </div>
+
+    <p class="mt-3">&copy; 2024 Andres Guardia. Todos los derechos reservados.</p>
+  </footer>
+
+
+  <!-- MODAL NOSOTROS -->
+  <div class="modal fade" id="modalNosotros" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Más sobre SkyLux</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          Somos una empresa hotelera dedicada a ofrecer experiencias únicas y exclusivas...
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
   </div>
 
-    <footer class="container-fluid bg-dark p-5 text-center">
-      <div class="row">
-        <div class="col">
-          <a href="agendas.html" class="text-decoration-none text-warning"><i class="bi bi-envelope-arrow-down"></i> AGENDAS </a>
-        </div>
-        <div class="col">
-          <a href="videos.html" class="text-decoration-none text-warning"><i class="bi bi-collection-play-fill"></i> VIDEOS </a>
-        </div>
-        <div class="col">
-          <a href="imagenes.html" class="text-decoration-none text-warning"><i class="bi bi-images"></i> IMAGENES </a>
-        </div>
-        <div class="col">
-          <a href="contacto.html" class="text-decoration-none text-warning"><i class="bi bi-chat-text-fill"></i> CONTACTO</a>
-        </div>
-        <div class="col">
-          <a href="nosotros.html" class="text-decoration-none text-warning"><i class="bi bi-people-fill"></i> NOSOTROS </a>
-  </div>
-  </div>
-  <div class="text-center text-white mt-2">
-    &copy; 2024 Andres Guardia. Todos los derechos reservados.
-  </footer>
 
+  <!-- MODAL RESERVA -->
+  <div class="modal fade" id="modalReserva" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Reservar Habitación</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3"><label class="form-label">Nombre</label><input type="text" class="form-control"></div>
+            <div class="mb-3"><label class="form-label">Correo</label><input type="email" class="form-control"></div>
+            <div class="mb-3"><label class="form-label">Comentario</label><textarea class="form-control" rows="3"></textarea></div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-warning">Enviar Reserva</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Contenedores -->
+<div id="loginContainer">
+  <h3>Login</h3>
+  <input type="text" id="loginUser" placeholder="Usuario">
+  <input type="password" id="loginPass" placeholder="Contraseña">
+  <button onclick="login()">Entrar</button>
+  <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Registrarse</a></p>
+</div>
+
+<div id="registroContainer" style="display:none;">
+  <h3>Registro</h3>
+  <input type="text" id="regUser" placeholder="Usuario">
+  <input type="password" id="regPass" placeholder="Contraseña">
+  <button onclick="registrar()">Crear cuenta</button>
+  <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar sesión</a></p>
+</div>
+
+<div id="app" style="display:none;">
+  <h3>Bienvenido a la app</h3>
+  <button onclick="logout()">Cerrar sesión</button>
+
+  <!-- Cambio de secciones -->
+  <nav>
+    <button onclick="cambiarVista('vista1')">Vista 1</button>
+    <button onclick="cambiarVista('vista2')">Vista 2</button>
+  </nav>
+
+  <div id="vista1" class="vista activa">
+    <p>Contenido de la Vista 1</p>
+  </div>
+  <div id="vista2" class="vista">
+    <p>Contenido de la Vista 2</p>
+  </div>
+</div>
+
+
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <!-- MODAL -->
+<div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+        <span id="cerrarModal" class="cerrar">&times;</span>
+        <h2>Iniciar Sesión</h2>
+
+        <form>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p>¿No tienes cuenta? <a href="#">Registrarse</a></p>
+    </div>
+</div>
 
 
 </body>
-
 </html>

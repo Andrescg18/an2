@@ -1,0 +1,712 @@
+/* ------------------------- */
+/*  Estilos Generales        */
+/* ------------------------- */
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar Dinámica */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Enlaces del Navbar */
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* ------------------------- */
+/*  Carousel                 */
+/* ------------------------- */
+
+.carousel-inner img {
+  object-fit: cover;
+  height: 500px;
+  filter: brightness(85%);
+  transition: filter 0.4s ease;
+}
+
+.carousel-inner img:hover {
+  filter: brightness(100%);
+}
+
+/* ------------------------- */
+/*  Logos Hoteles (cuadros)  */
+/* ------------------------- */
+
+.bg-dark.shadow-sm {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #ffc107;
+}
+
+.bg-dark.shadow-sm:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #ffc107;
+}
+
+/* ------------------------- */
+/*  Sección "Quiénes Somos"  */
+/* ------------------------- */
+
+h2 i {
+  color: #ffc107;
+}
+
+#quienes-somos {
+  background-color: #fff8e1;
+  padding: 25px;
+  border-radius: 8px;
+  transition: box-shadow .3s ease;
+}
+
+#quienes-somos:hover {
+  box-shadow: 0 0 12px rgba(255,193,7,0.5);
+}
+
+/* Botón “Saber más” */
+.btn-outline-warning {
+  transition: background-color .3s, color .3s, transform .2s;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ------------------------- */
+/*  Cards Dinámicas Mejoradas */
+/* ------------------------- */
+
+/* Card general */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  background: linear-gradient(145deg, #fff8e1, #fff3c4);
+}
+
+/* Hover cards */
+.card:hover {
+  transform: translateY(-15px) rotateZ(-1deg);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  background: linear-gradient(145deg, #9b8e3a, #ffffff);
+}
+
+/* Card image */
+.card-img-top {
+  border-radius: 50%;
+  border: 4px solid #000000;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 20px auto 10px;
+}
+
+/* Hover image */
+.card-img-top:hover {
+  transform: scale(1.15) rotateZ(-5deg);
+  box-shadow: 0 8px 20px rgba(255,193,7,0.5);
+}
+
+/* Card body */
+.card-body {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.4s ease;
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Botón dentro de card */
+.card .btn {
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Íconos dinámicos */
+.card i {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover i {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card i {
+    font-size: 2rem;
+  }
+}
+
+
+/* ------------------------- */
+/*  Footer                   */
+/* ------------------------- */
+
+footer {
+  border-top: 3px solid #ffc107;
+  margin-top: 30px;
+  transition: background-color .3s ease;
+}
+
+footer:hover {
+  background-color: #1a1a1a;
+}
+
+footer a {
+  transition: color .3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ------------------------- */
+/*  Responsive Mejorado      */
+/* ------------------------- */
+
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none;
+  }
+
+  .carousel-inner img {
+    height: 300px;
+  }
+} 
+
+
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #696964, #f5d478);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 1s ease;
+}
+
+/* Navbar personalizado */
+.navbar {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+
+.navbar:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.navbar-brand img {
+    transition: transform 0.5s ease;
+}
+
+.navbar-brand img:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+/* Formulario dinámico */
+#contactForm {
+    background: linear-gradient(145deg, #ffffff, #fdf6e3);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+}
+
+#contactForm:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(145deg, #fff7dc, #ffe28a);
+}
+
+#contactForm .form-control {
+    border-radius: 12px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+    border-color: #f5a623;
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.5);
+    outline: none;
+    transform: scale(1.02);
+}
+
+#contactForm button {
+    border-radius: 50px;
+    background: linear-gradient(90deg, #f5a623, #f8e71c);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#contactForm button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(90deg, #f8e71c, #f5a623);
+}
+
+/* Feedback dinámico */
+#feedback {
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 15px;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+/* Información de contacto */
+.contact-info i {
+    font-size: 3rem;
+    color: #f5a623;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-info i:hover {
+    transform: scale(1.3) rotate(15deg);
+    color: #f8e71c;
+    text-shadow: 0 0 10px #f8e71c;
+}
+
+.contact-info p {
+    font-weight: 600;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info p:hover {
+    transform: scale(1.05);
+}
+
+/* Footer estilizado */
+footer {
+    margin-top: auto;
+    background: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+footer a {
+    color: #f5a623;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #f8e71c;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+/* Animación de entrada de secciones */
+.container, .contact-info, footer {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+.container:nth-child(1) { animation-delay: 0.2s; }
+.contact-info { animation-delay: 0.4s; }
+footer { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:768px) {
+    .contact-info i {
+        font-size: 2.2rem;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #696964, #f5d478);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 1s ease;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+
+.navbar:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.navbar-brand img {
+    transition: transform 0.5s ease;
+}
+
+.navbar-brand img:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+/* Contenedor principal */
+.container {
+    background: linear-gradient(145deg, #ffffff, #fdf6e3);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+.container h2, .container h4 {
+    font-weight: 700;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container h2:hover, .container h4:hover {
+    transform: scale(1.05);
+    color: #f5a623;
+}
+
+.container p, .container ul {
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.container p:hover, .container ul:hover {
+    transform: scale(1.02);
+}
+
+/* Iconos */
+.bi {
+    color: #f5a623;
+    margin-right: 5px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.bi:hover {
+    transform: scale(1.3) rotate(15deg);
+    color: #f8e71c;
+    text-shadow: 0 0 10px #f8e71c;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    background: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+footer a {
+    color: #f5a623;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #f8e71c;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Animación de entrada de secciones */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:768px) {
+    .bi {
+        font-size: 1.8rem;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #696964, #f5d478);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar dinámico */
+.navbar {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: background 0.5s ease;
+}
+
+.navbar:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.navbar-brand img {
+    transition: transform 0.5s ease;
+}
+
+.navbar-brand img:hover {
+    transform: rotate(25deg) scale(1.1);
+}
+
+/* Carrusel estilizado */
+.carousel-inner {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.carousel-item img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Indicadores animados */
+.carousel-indicators [data-bs-target] {
+    background-color: #f5a623;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #f8e71c;
+    transform: scale(1.3);
+}
+
+/* Botones de control */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 0 5px #000);
+    transition: transform 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer dinámico */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+footer a {
+    color: #f5a623;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #f8e71c;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+/* Animaciones de entrada */
+.container h2, .container p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.container h2 {
+    animation-delay: 0.2s;
+}
+
+.container p {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  z-index:1000;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.modal-send {
+  width: 100%;
+  padding: 10px;
+  background: #ff9900;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.vista { display: none; }
+.vista.activa { display: block; }
+/* Botón Login */
+.btn-login {
+    background: #FFC400;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Fondo del modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+/* Caja del modal */
+.modal-contenido {
+    background: white;
+    width: 350px;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 10px;
+    animation: aparecer 0.3s ease-in-out;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* Botón cerrar */
+.cerrar {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Inputs */
+.modal-contenido input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botón enviar */
+.modal-contenido button {
+    width: 100%;
+    padding: 10px;
+    background: #FFC400;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
