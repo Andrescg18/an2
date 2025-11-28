@@ -710,3 +710,253 @@ footer a:hover {
     cursor: pointer;
     border-radius: 6px;
 }
+/* ------------------------------ */
+/* MODAL PERSONALIZADO SKYLUX     */
+/* ------------------------------ */
+
+.custom-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.custom-modal-content {
+    background: #ffffff;
+    width: 380px;
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transform: translateY(-20px);
+    animation: slideIn 0.35s ease forwards;
+    position: relative;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Cerrar */
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: #ff4444;
+    transform: scale(1.1);
+}
+
+/* Título e icono */
+.modal-header-custom {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.modal-header-custom h3 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Inputs */
+.modal-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    margin-bottom: 12px;
+    transition: 0.2s;
+    background: #fafafa;
+}
+
+.modal-input:focus {
+    border-color: #ffcc00;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255,204,0,0.4);
+}
+
+/* Botón */
+.modal-send {
+    width: 100%;
+    background: #ffcc00;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.modal-send:hover {
+    background: #e0b000;
+    transform: translateY(-2px);
+}
+
+/* Texto inferior */
+.text-red {
+    color: #5d5d5d;
+    text-decoration: none;
+}
+
+.text-red:hover {
+    text-decoration: underline;
+}
+
+/* Registro exitoso */
+.success-box {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 15px 20px;
+    background: #28a745;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* Fondo desenfocado cuando el modal está activo */
+.modal-backdrop.show {
+    backdrop-filter: blur(6px);
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+/* Asegurar que el modal quede centrado */
+.modal-dialog {
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Opcional: estilo más elegante para el modal */
+.modal-content {
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+/* Fondo desenfocado */
+.modal-backdrop.show {
+    backdrop-filter: blur(6px);
+}
+
+/* Caja del modal */
+.auth-box {
+    border-radius: 18px;
+    padding-bottom: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.auth-header h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.auth-body {
+    padding: 20px;
+}
+
+.switch-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.switch-link {
+    color: #ffb100;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.switch-link:hover {
+    text-decoration: underline;
+}
+
+/* Transición entre login y registro */
+.auth-section {
+    transition: all 0.3s ease;
+}
+
+/* Fondo de la franja superior */
+.topbar,
+.navbar,
+header {
+    background-color: #ffffff !important; /* Blanco */
+}
+
+/* Botón Login tipo input */
+.login-btn,
+#btnLogin,
+#login-button,
+.iniciarSesionBtn {
+    background-color: #ffffff !important;
+    border: 2px solid #ffffff !important; /* Bordes blancos */
+    color: #000 !important; /* Texto negro */
+}
+
+/* Hover del botón login */
+.login-btn:hover,
+#btnLogin:hover,
+#login-button:hover {
+    background-color: #f1f1f1 !important;
+    border-color: #f1f1f1 !important;
+}
+
+/* Si el rectángulo tenía fondo rojo dentro de un input fake */
+.fake-input,
+.barra-login {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Elimina cualquier sombra roja */
+* {
+    box-shadow: none !important;
+}
+.eliminar-reserva i {
+  font-size: 1rem;
+}
+
+.eliminar-reserva:hover {
+  opacity: 0.8;
+}

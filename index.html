@@ -6,43 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYLUX</title>
 
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR (igual al index) -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-danger">
+  <nav class="navbar navbar-expand-lg bg-danger">
     <div class="container-fluid bg-warning">
+
       <a class="navbar-brand" href="#">
-        <img src="logo1.png" alt="" width="40" height="40" class="me-2 rounded-circle"> SKYLUX
+        <img src="logo1.png" alt="" width="40" height="40" class="me-2 rounded-circle">
+        SKYLUX
       </a>
+
+
+      <button id="btnLogin"
+        class="btn-red ms-3"
+        data-bs-toggle="modal"
+        data-bs-target="#modalLogin">
+        Iniciar Sesión / Registrarse
+      </button>
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-    <button id="btnLogin" class="btn-red ms-3">Iniciar Sesión / Registrarse</button>
-</li>
-          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="agendas.html">Agendas</a></li>
           <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
           <li class="nav-item"><a class="nav-link" href="imagenes.html">Imagenes</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+
         </ul>
       </div>
+
     </div>
   </nav>
 
+<div class="modal fade" id="authModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content auth-box">
 
-  <!-- CAROUSEL -->
+      <div class="auth-header">
+        <h4 id="authTitle">Iniciar Sesión</h4>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="auth-body">
+
+        <form id="loginForm" class="auth-section">
+          <label>Correo</label>
+          <input type="email" class="form-control mb-2" required>
+
+          <label>Contraseña</label>
+          <input type="password" class="form-control mb-3" required>
+
+          <button class="btn btn-warning w-100 mb-2">Entrar</button>
+
+          <p class="switch-text">
+            ¿No tienes cuenta? <span class="switch-link" id="goRegister">Regístrate aquí</span>
+          </p>
+        </form>
+
+        <form id="registerForm" class="auth-section d-none">
+          <label>Nombre</label>
+          <input type="text" class="form-control mb-2" required>
+
+          <label>Correo</label>
+          <input type="email" class="form-control mb-2" required>
+
+          <label>Contraseña</label>
+          <input type="password" class="form-control mb-3" required>
+
+          <button class="btn btn-warning w-100 mb-2">Crear Cuenta</button>
+
+          <p class="switch-text">
+            ¿Ya tienes cuenta? <span class="switch-link" id="goLogin">Inicia sesión</span>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
   <div id="carouselExampleIndicators" class="carousel slide">
+
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
@@ -50,16 +111,16 @@
     </div>
 
     <div class="carousel-inner">
-      <div class="carousel-item active" style="max-height: 500px;">
-        <img src="logo.png" class="d-block w-100" alt="">
+      <div class="carousel-item active">
+        <img src="logo.png" class="d-block w-100" alt="" style="max-height: 500px;">
       </div>
 
-      <div class="carousel-item" style="max-height: 500px;">
-        <img src="logo1.png" class="d-block w-100" alt="">
+      <div class="carousel-item">
+        <img src="logo1.png" class="d-block w-100" alt="" style="max-height: 500px;">
       </div>
 
-      <div class="carousel-item" style="max-height: 500px;">
-        <img src="logo2.png" class="d-block w-100" alt="">
+      <div class="carousel-item">
+        <img src="logo2.png" class="d-block w-100" alt="" style="max-height: 500px;">
       </div>
     </div>
 
@@ -73,143 +134,167 @@
   </div>
 
 
-  <!-- LOGOS DE HOTELES -->
   <div class="container-fluid bg-warning-subtle py-4 text-center">
     <div class="container">
 
       <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 align-items-center justify-content-center">
 
-        <div class="col"><a href="https://www.ritzcarlton.com" target="_blank" class="text-decoration-none">
+
+        <div class="col">
+          <a href="https://www.ritzcarlton.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">The Ritz-Carlton</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
-        <div class="col"><a href="https://www.fourseasons.com" target="_blank" class="text-decoration-none">
+        <div class="col">
+          <a href="https://www.fourseasons.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">Four Seasons</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
-        <div class="col"><a href="https://www.mandarinoriental.com" target="_blank" class="text-decoration-none">
+        <div class="col">
+          <a href="https://www.mandarinoriental.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">Mandarin Oriental</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
-        <div class="col"><a href="https://www.marriott.com" target="_blank" class="text-decoration-none">
+        <div class="col">
+          <a href="https://www.marriott.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">Marriott</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
-        <div class="col"><a href="https://www.hilton.com" target="_blank" class="text-decoration-none">
+        <div class="col">
+          <a href="https://www.hilton.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">Hilton</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
-        <div class="col"><a href="https://www.hyatt.com" target="_blank" class="text-decoration-none">
+        <div class="col">
+          <a href="https://www.hyatt.com" target="_blank" class="text-decoration-none">
             <div class="border rounded px-3 py-2 bg-dark shadow-sm">
               <h6 class="mb-0 text-warning">Hyatt</h6>
             </div>
-          </a></div>
+          </a>
+        </div>
 
       </div>
+
     </div>
   </div>
 
 
-<!-- QUIÉNES SOMOS DINÁMICO -->
-<div class="container mt-5">
-  <h2 class="text-center mb-4">QUIÉNES SOMOS <i class="bi bi-search"></i></h2>
+  <div class="container mt-5">
 
-  <div class="row g-4 text-center">
+    <h2 class="text-center mb-4">QUIÉNES SOMOS <i class="bi bi-search"></i></h2>
 
-    <!-- CARD 1: Misión -->
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-bullseye display-4 text-warning mb-3"></i>
-          <h5 class="card-title">Nuestra Misión</h5>
-          <p class="card-text">Brindar soluciones tecnológicas innovadoras para el sector hotelero, garantizando eficiencia y satisfacción para nuestros clientes.</p>
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-bullseye display-4 text-warning mb-3"></i>
+            <h5 class="card-title">Nuestra Misión</h5>
+            <p class="card-text">
+              Brindar soluciones tecnológicas innovadoras para el sector hotelero,
+              garantizando eficiencia y satisfacción.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CARD 2: Visión -->
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-eye display-4 text-warning mb-3"></i>
-          <h5 class="card-title">Nuestra Visión</h5>
-          <p class="card-text">Ser líderes en innovación hotelera, ofreciendo experiencias únicas y exclusivas que marquen la diferencia en el mercado.</p>
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-eye display-4 text-warning mb-3"></i>
+            <h5 class="card-title">Nuestra Visión</h5>
+            <p class="card-text">
+              Ser líderes en innovación hotelera, ofreciendo experiencias únicas
+              y exclusivas.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CARD 3: Valores -->
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-stars display-4 text-warning mb-3"></i>
-          <h5 class="card-title">Nuestros Valores</h5>
-          <p class="card-text">Compromiso, excelencia y atención personalizada en cada servicio que ofrecemos, asegurando la satisfacción total de nuestros clientes.</p>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-stars display-4 text-warning mb-3"></i>
+            <h5 class="card-title">Nuestros Valores</h5>
+            <p class="card-text">
+              Compromiso, excelencia y atención personalizada para garantizar
+              satisfacción total.
+            </p>
+          </div>
         </div>
       </div>
+
     </div>
 
+
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalNosotros">
+        Saber más de nosotros
+      </button>
+    </div>
   </div>
 
-  <!-- Botón modal para más información -->
-  <div class="text-center mt-4">
-    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalNosotros">
-      Saber más de nosotros
-    </button>
-  </div>
-</div>
 
 
-
-  <!-- CARDS -->
   <div class="container mt-5 d-none d-md-block">
+
     <div class="row">
 
-      <!-- CARD 1 -->
+ 
       <div class="col-md-4">
         <div class="card border-0 text-center">
           <img src="interior 1.jpg" class="card-img-top rounded-circle"
             style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
             <h5>PH</h5>
-            <p>PH moderno y funcional ubicado en una zona residencial tranquila. Cuenta con espacios bien distribuidos, excelente iluminación natural y acceso a áreas comunes. Ideal para quienes buscan comodidad, seguridad y una comunidad organizada.</p>
-            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+            <p>PH moderno y funcional ubicado en zona residencial tranquila, con excelente iluminación natural.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva" data-service="PH">
+              Reservar
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2 -->
       <div class="col-md-4">
         <div class="card border-0 text-center">
           <img src="interior 2.jpg" class="card-img-top rounded-circle"
             style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
             <h5>PH JUNTO AL MAR</h5>
-            <p>Exclusivo PH frente al mar, con impresionantes vistas panorámicas, acceso directo a la playa y diseño contemporáneo. Disfruta del sonido de las olas, amplios espacios, terraza privada y un estilo de vida relajado y sofisticado.</p>
-            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+            <p>Exclusivo PH frente al mar con vistas panorámicas, acceso directo a la playa y terraza privada.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva" data-service="PH JUNTO AL MAR">
+              Reservar
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- CARD 3 -->
       <div class="col-md-4">
         <div class="card border-0 text-center">
           <img src="interior 3.jpg" class="card-img-top rounded-circle"
             style="width:150px;height:150px;object-fit:cover;">
           <div class="card-body">
             <h5>HOTEL 5 ESTRELLAS</h5>
-            <p>Hotel 5 estrellas de lujo, diseñado para ofrecer una experiencia inigualable. Disfruta de habitaciones elegantes, gastronomía de clase mundial, spa, piscina, gimnasio y atención personalizada en cada detalle. Perfecto para viajes de placer o negocios.</p>
-            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+            <p>Hotel de lujo con gastronomía premium, spa, piscina, gimnasio y atención personalizada.</p>
+            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva" data-service="HOTEL 5 ESTRELLAS">
+              Reservar
+            </a>
           </div>
         </div>
       </div>
@@ -217,16 +302,19 @@
     </div>
 
 
-    <!-- CARD HORIZONTAL 1 -->
     <div class="container mt-5">
       <div class="card border-0">
         <div class="row g-0 align-items-center">
-          <div class="col-md-2"><img src="entrando1.jpg" class="img-fluid rounded-start"></div>
+          <div class="col-md-2">
+            <img src="entrando1.jpg" class="img-fluid rounded-start">
+          </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5>Hoteles VIP SkyLux Boutique <i class="bi bi-gem"></i></h5>
-              <p>Ubicado en el corazón de la ciudad, SkyLux ofrece elegancia y privacidad en cada detalle. Rooftop con piscina infinita, gastronomía gourmet y atención VIP las 24 horas.</p>
-              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reserva ya</button>
+              <p>Elegancia y privacidad con rooftop, piscina infinita y servicio VIP.</p>
+              <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva" data-service="SKYLUX VIP">
+                Reservar
+              </a>
             </div>
           </div>
         </div>
@@ -234,19 +322,21 @@
     </div>
 
 
-    <!-- CARD HORIZONTAL 2 -->
     <div class="container mt-5">
       <div class="card border-0 text-center">
         <div class="row g-0">
           <div class="col-md-8">
             <div class="card-body">
               <h5>Hoteles VIP Maré Elite <i class="bi bi-gem"></i></h5>
-              <p>Exclusivo resort frente al mar, donde el lujo se encuentra con la tranquilidad. Suites con vista panorámica, spa de clase mundial y servicio personalizado para una experiencia inolvidable.</p>
-              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalReserva">Reserva ya</button>
+              <p>Resort frente al mar, suites panorámicas y servicio personalizado.</p>
+              <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalReserva" data-service="MARÉ ELITE">
+                Reservar
+              </a>
             </div>
           </div>
-
-          <div class="col-md-4"><img src="entrando2.jpg" class="img-fluid rounded-end"></div>
+          <div class="col-md-4">
+            <img src="entrando2.jpg" class="img-fluid rounded-end">
+          </div>
         </div>
       </div>
     </div>
@@ -254,23 +344,21 @@
   </div>
 
 
-  <!-- LISTA DE RESERVAS -->
+ 
   <div class="container mt-5">
     <div class="card shadow-lg border-0">
       <div class="card-header bg-warning text-center">
         <h4 class="mb-0 text-dark"><i class="bi bi-journal-text"></i> Reservas Realizadas</h4>
       </div>
-
       <div class="card-body text-center">
-        <p class="text-muted">Aquí aparecerán las reservas que los clientes vayan enviando.</p>
+        <p class="text-muted">Aquí aparecerán las reservas enviadas por los clientes.</p>
         <ul id="listaReservas" class="list-group"></ul>
       </div>
     </div>
   </div>
 
 
-  <!-- FOOTER -->
-  <footer class="container-fluid bg-dark p-5 text-center text-white">
+  <footer class="container-fluid bg-dark p-5 text-center text-white mt-5">
     <div class="row">
       <div class="col"><a href="agendas.html" class="text-warning text-decoration-none">AGENDAS</a></div>
       <div class="col"><a href="videos.html" class="text-warning text-decoration-none">VIDEOS</a></div>
@@ -278,15 +366,14 @@
       <div class="col"><a href="contacto.html" class="text-warning text-decoration-none">CONTACTO</a></div>
       <div class="col"><a href="nosotros.html" class="text-warning text-decoration-none">NOSOTROS</a></div>
     </div>
-
     <p class="mt-3">&copy; 2024 Andres Guardia. Todos los derechos reservados.</p>
   </footer>
 
 
-  <!-- MODAL NOSOTROS -->
   <div class="modal fade" id="modalNosotros" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
+
         <div class="modal-header bg-warning">
           <h5 class="modal-title">Más sobre SkyLux</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
@@ -299,12 +386,12 @@
         <div class="modal-footer">
           <button class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
         </div>
+
       </div>
     </div>
   </div>
 
 
-  <!-- MODAL RESERVA -->
   <div class="modal fade" id="modalReserva" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -316,9 +403,20 @@
 
         <div class="modal-body">
           <form>
-            <div class="mb-3"><label class="form-label">Nombre</label><input type="text" class="form-control"></div>
-            <div class="mb-3"><label class="form-label">Correo</label><input type="email" class="form-control"></div>
-            <div class="mb-3"><label class="form-label">Comentario</label><textarea class="form-control" rows="3"></textarea></div>
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Correo</label>
+              <input type="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Comentario</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
           </form>
         </div>
 
@@ -331,63 +429,71 @@
     </div>
   </div>
 
-<!-- Contenedores -->
-<div id="loginContainer">
-  <h3>Login</h3>
-  <input type="text" id="loginUser" placeholder="Usuario">
-  <input type="password" id="loginPass" placeholder="Contraseña">
-  <button onclick="login()">Entrar</button>
-  <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Registrarse</a></p>
-</div>
 
-<div id="registroContainer" style="display:none;">
-  <h3>Registro</h3>
-  <input type="text" id="regUser" placeholder="Usuario">
-  <input type="password" id="regPass" placeholder="Contraseña">
-  <button onclick="registrar()">Crear cuenta</button>
-  <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar sesión</a></p>
-</div>
+  <div class="modal fade" id="modalLogin" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
 
-<div id="app" style="display:none;">
-  <h3>Bienvenido a la app</h3>
-  <button onclick="logout()">Cerrar sesión</button>
+        <div class="modal-header">
+          <h5 class="modal-title">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
 
-  <!-- Cambio de secciones -->
-  <nav>
-    <button onclick="cambiarVista('vista1')">Vista 1</button>
-    <button onclick="cambiarVista('vista2')">Vista 2</button>
-  </nav>
+        <div class="modal-body">
+          <form id="formLogin">
+            <div class="mb-3">
+              <label class="form-label">Correo</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
 
-  <div id="vista1" class="vista activa">
-    <p>Contenido de la Vista 1</p>
-  </div>
-  <div id="vista2" class="vista">
-    <p>Contenido de la Vista 2</p>
-  </div>
-</div>
+            <div class="mb-3">
+              <label class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPass" required>
+            </div>
 
+            <button type="submit" class="btn btn-warning w-100">Entrar</button>
+          </form>
+        </div>
 
-
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
-
-  <!-- MODAL -->
-<div id="modalLogin" class="modal">
-    <div class="modal-contenido">
-        <span id="cerrarModal" class="cerrar">&times;</span>
-        <h2>Iniciar Sesión</h2>
-
-        <form>
-            <input type="text" placeholder="Usuario" required>
-            <input type="password" placeholder="Contraseña" required>
-            <button type="submit">Entrar</button>
-        </form>
-
-        <p>¿No tienes cuenta? <a href="#">Registrarse</a></p>
+      </div>
     </div>
-</div>
+  </div>
 
+
+
+  <div id="registerModal" class="custom-modal">
+    <div class="custom-modal-content">
+
+      <button id="closeRegister" class="modal-close">×</button>
+
+      <div class="modal-header-custom">
+        <img src="logo2.png" class="modal-icon">
+        <h3>Crear Cuenta</h3>
+      </div>
+
+      <input type="text" id="regNombres" placeholder="Nombres" class="modal-input">
+      <input type="text" id="regApellidos" placeholder="Apellidos" class="modal-input">
+      <input type="email" id="regCorreo" placeholder="Correo electrónico" class="modal-input">
+      <input type="tel" id="regTelefono" placeholder="Teléfono" class="modal-input">
+      <input type="password" id="regPassword" placeholder="Contraseña" class="modal-input">
+
+      <button id="registerSend" class="modal-send">Registrarse</button>
+
+      <p class="text-center mt-3">
+        ¿Ya tienes cuenta?
+        <a href="#" id="backToLogin" class="text-red">Iniciar sesión</a>
+      </p>
+
+    </div>
+  </div>
+
+  <div id="registerSuccess" class="success-box" style="display:none;">
+    Registro exitoso. ¡Bienvenido!
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
 
 </body>
+
 </html>
