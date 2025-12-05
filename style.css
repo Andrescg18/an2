@@ -645,7 +645,7 @@ footer a:hover {
 
 .vista { display: none; }
 .vista.activa { display: block; }
-/* Botón Login */
+
 .btn-login {
     background: #FFC400;
     border: none;
@@ -655,7 +655,7 @@ footer a:hover {
     border-radius: 8px;
 }
 
-/* Fondo del modal */
+
 .modal {
     display: none; 
     position: fixed;
@@ -668,7 +668,7 @@ footer a:hover {
     backdrop-filter: blur(3px);
 }
 
-/* Caja del modal */
+
 .modal-contenido {
     background: white;
     width: 350px;
@@ -678,20 +678,19 @@ footer a:hover {
     animation: aparecer 0.3s ease-in-out;
 }
 
-/* Animación */
+
 @keyframes aparecer {
     from { transform: scale(0.7); opacity: 0; }
     to   { transform: scale(1); opacity: 1; }
 }
 
-/* Botón cerrar */
+
 .cerrar {
     float: right;
     font-size: 25px;
     cursor: pointer;
 }
 
-/* Inputs */
 .modal-contenido input {
     width: 100%;
     padding: 10px;
@@ -700,7 +699,7 @@ footer a:hover {
     border: 1px solid #ccc;
 }
 
-/* Botón enviar */
+
 .modal-contenido button {
     width: 100%;
     padding: 10px;
@@ -710,9 +709,7 @@ footer a:hover {
     cursor: pointer;
     border-radius: 6px;
 }
-/* ------------------------------ */
-/* MODAL PERSONALIZADO SKYLUX     */
-/* ------------------------------ */
+
 
 .custom-modal {
     position: fixed;
@@ -737,7 +734,7 @@ footer a:hover {
     position: relative;
 }
 
-/* Animaciones */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -748,7 +745,7 @@ footer a:hover {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Cerrar */
+
 .modal-close {
     position: absolute;
     top: 12px;
@@ -766,7 +763,7 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* Título e icono */
+
 .modal-header-custom {
     text-align: center;
     margin-bottom: 18px;
@@ -784,7 +781,7 @@ footer a:hover {
     object-fit: cover;
 }
 
-/* Inputs */
+
 .modal-input {
     width: 100%;
     padding: 12px 14px;
@@ -802,7 +799,7 @@ footer a:hover {
     box-shadow: 0 0 8px rgba(255,204,0,0.4);
 }
 
-/* Botón */
+
 .modal-send {
     width: 100%;
     background: #ffcc00;
@@ -820,7 +817,7 @@ footer a:hover {
     transform: translateY(-2px);
 }
 
-/* Texto inferior */
+
 .text-red {
     color: #5d5d5d;
     text-decoration: none;
@@ -830,7 +827,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Registro exitoso */
+
 .success-box {
     position: fixed;
     bottom: 25px;
@@ -848,31 +845,31 @@ footer a:hover {
     from { transform: translateY(40px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-/* Fondo desenfocado cuando el modal está activo */
+
 .modal-backdrop.show {
     backdrop-filter: blur(6px);
     background-color: rgba(0,0,0,0.4) !important;
 }
 
-/* Asegurar que el modal quede centrado */
+
 .modal-dialog {
     margin-top: 0;
-    top: 50%;
+    top: 50%;x
     transform: translateY(-50%);
 }
 
-/* Opcional: estilo más elegante para el modal */
+
 .modal-content {
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
-/* Fondo desenfocado */
+
 .modal-backdrop.show {
     backdrop-filter: blur(6px);
 }
 
-/* Caja del modal */
+
 .auth-box {
     border-radius: 18px;
     padding-bottom: 15px;
@@ -913,29 +910,26 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Transición entre login y registro */
+
 .auth-section {
     transition: all 0.3s ease;
 }
 
-/* Fondo de la franja superior */
 .topbar,
 .navbar,
 header {
-    background-color: #ffffff !important; /* Blanco */
+    background-color: #ffffff !important; 
 }
 
-/* Botón Login tipo input */
 .login-btn,
 #btnLogin,
 #login-button,
 .iniciarSesionBtn {
     background-color: #ffffff !important;
-    border: 2px solid #ffffff !important; /* Bordes blancos */
-    color: #000 !important; /* Texto negro */
+    border: 2px solid #ffffff !important; 
+    color: #000 !important; 
 }
 
-/* Hover del botón login */
 .login-btn:hover,
 #btnLogin:hover,
 #login-button:hover {
@@ -943,14 +937,12 @@ header {
     border-color: #f1f1f1 !important;
 }
 
-/* Si el rectángulo tenía fondo rojo dentro de un input fake */
 .fake-input,
 .barra-login {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
 }
 
-/* Elimina cualquier sombra roja */
 * {
     box-shadow: none !important;
 }
@@ -960,4 +952,48 @@ header {
 
 .eliminar-reserva:hover {
   opacity: 0.8;
+}
+.auth-modern {
+  border-radius: 18px;
+  padding: 10px 20px;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 8px;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link.active {
+  background: #ffcc00;
+  color: white;
+}
+.user-panel {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.user-panel:hover {
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.user-panel h4 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.user-panel p {
+    margin: 4px 0;
+    color: #555;
+}
+
+.user-panel button,
+.user-panel a.btn {
+    border-radius: 10px;
 }

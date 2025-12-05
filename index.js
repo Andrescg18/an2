@@ -1,6 +1,27 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
+
+
+  const tabLogin = document.getElementById("tabLogin");
+  const tabRegister = document.getElementById("tabRegister");
+  const boxLogin = document.getElementById("boxLogin");
+  const boxRegister = document.getElementById("boxRegister");
+
+  tabLogin?.addEventListener("click", () => {
+    tabLogin.classList.add("active");
+    tabRegister.classList.remove("active");
+
+    boxLogin.classList.remove("d-none");
+    boxRegister.classList.add("d-none");
+  });
+
+  tabRegister?.addEventListener("click", () => {
+    tabRegister.classList.add("active");
+    tabLogin.classList.remove("active");
+
+    boxRegister.classList.remove("d-none");
+    boxLogin.classList.add("d-none");
+  });
+
 
   const escapeHtml = (str = "") =>
     String(str)
@@ -10,49 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/"/g, "&quot;");
 
 
-  const loginModal = document.getElementById("loginModal");
-  const registerModal = document.getElementById("registerModal");
-  const registerSuccess = document.getElementById("registerSuccess");
+
 
   const btnLogin = document.getElementById("btnLogin");
-  const closeLogin = document.getElementById("closeLogin");
-  const closeRegister = document.getElementById("closeRegister");
-
   const loginSend = document.getElementById("loginSend");
   const registerSend = document.getElementById("registerSend");
 
-  const openRegister = document.getElementById("openRegister");
-  const backToLogin = document.getElementById("backToLogin");
-
-  function openModal(modal) {
-    modal.style.display = "flex";
-    setTimeout(() => modal.classList.add("show"), 10);
-  }
-
-  function closeModal(modal) {
-    modal.classList.remove("show");
-    setTimeout(() => (modal.style.display = "none"), 250);
-  }
+  const authModal = new bootstrap.Modal(document.getElementById("authModal"));
 
 
-  btnLogin?.addEventListener("click", () => openModal(loginModal));
 
-
-  closeLogin?.addEventListener("click", () => closeModal(loginModal));
-
-  openRegister?.addEventListener("click", () => {
-    closeModal(loginModal);
-    setTimeout(() => openModal(registerModal), 300);
+  btnLogin?.addEventListener("click", () => {
+    authModal.show();
+    tabLogin.click();
   });
 
-
-  closeRegister?.addEventListener("click", () => closeModal(registerModal));
-
-
-  backToLogin?.addEventListener("click", () => {
-    closeModal(registerModal);
-    setTimeout(() => openModal(loginModal), 300);
-  });
 
 
   registerSend?.addEventListener("click", () => {
@@ -71,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("skylux_user", JSON.stringify(user));
 
-    closeModal(registerModal);
-
-    registerSuccess.style.display = "block";
-    setTimeout(() => (registerSuccess.style.display = "none"), 2500);
+    alert("Registro exitoso. ¡Bienvenido!");
+    tabLogin.click();
   });
+
+
 
 
   loginSend?.addEventListener("click", () => {
@@ -90,70 +83,79 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (correo === user.correo && pass === user.password) {
-      closeModal(loginModal);
-      alert("Bienvenido " + user.nombres);
+
+      authModal.hide();
+
+      document.getElementById("userPanel").classList.remove("d-none");
+      document.getElementById("userName").textContent =
+        user.nombres.toUpperCase() + " " + user.apellidos.toUpperCase();
+      document.getElementById("userEmail").textContent = user.correo;
+
     } else {
       alert("Credenciales incorrectas.");
     }
   });
 
 
+
+
   const listaReservas = document.getElementById("listaReservas");
 
   function renderReservas() {
     if (!listaReservas) return;
-  
+
     const reservas = JSON.parse(localStorage.getItem("skylux_reservas") || "[]");
-  
+
     listaReservas.innerHTML = reservas.length
       ? reservas
           .map(
             (r, index) =>
               `<li class="list-group-item d-flex justify-content-between align-items-center">
-                  <span>
-                    <strong>${escapeHtml(r.nombre)}</strong> — 
-                    ${escapeHtml(r.servicio)} — 
-                    ${escapeHtml(r.comentario)}
-                  </span>
-  
-                  <button class="btn btn-danger btn-sm eliminar-reserva" data-index="${index}">
-                      <i class="bi bi-trash"></i>
-                  </button>
+                <span>
+                  <strong>${escapeHtml(r.nombre)}</strong> —
+                  ${escapeHtml(r.servicio)} —
+                  ${escapeHtml(r.comentario)}
+                </span>
+
+                <button class="btn btn-danger btn-sm eliminar-reserva"
+                  data-index="${index}">
+                  <i class="bi bi-trash"></i>
+                </button>
               </li>`
           )
           .join("")
       : `<li class="list-group-item text-muted">No hay reservas aún</li>`;
-  
-      function eliminarReserva(index) {
-        let reservas = JSON.parse(localStorage.getItem("skylux_reservas") || "[]");
-      
-        reservas.splice(index, 1); 
-      
-        localStorage.setItem("skylux_reservas", JSON.stringify(reservas));
-      
-        renderReservas(); 
-      
+
     document.querySelectorAll(".eliminar-reserva").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const index = btn.getAttribute("data-index");
-        eliminarReserva(index);
-      });
+      btn.addEventListener("click", () => eliminarReserva(btn.dataset.index));
     });
   }
-  
+
+  function eliminarReserva(index) {
+    let reservas = JSON.parse(localStorage.getItem("skylux_reservas") || "[]");
+    reservas.splice(index, 1);
+    localStorage.setItem("skylux_reservas", JSON.stringify(reservas));
+    renderReservas();
+  }
+
   renderReservas();
+
+
 
 
   document.querySelectorAll("[data-bs-target='#modalReserva']").forEach(btn => {
     btn.addEventListener("click", e => {
       const servicio = btn.getAttribute("data-service");
-      document.querySelector("#modalReserva .modal-title").innerHTML =
-        "Reservar " + servicio;
-      document.getElementById("modalReserva").setAttribute("data-servicio", servicio);
+      document
+        .querySelector("#modalReserva .modal-title")
+        .innerHTML = "Reservar " + servicio;
+
+      document
+        .getElementById("modalReserva")
+        .setAttribute("data-servicio", servicio);
     });
   });
 
- 
   document
     .querySelector("#modalReserva .btn.btn-warning")
     ?.addEventListener("click", () => {
@@ -184,32 +186,48 @@ document.addEventListener("DOMContentLoaded", () => {
       renderReservas();
       alert("Reserva enviada correctamente.");
 
-      // reset
       document.querySelector("#modalReserva input[type=text]").value = "";
       document.querySelector("#modalReserva input[type=email]").value = "";
       document.querySelector("#modalReserva textarea").value = "";
     });
+
+
+
+
+  document.getElementById("logoutBtn")?.addEventListener("click", () => {
+    document.getElementById("userPanel").classList.add("d-none");
+    alert("Sesión cerrada.");
+  });
+
+  document.getElementById("deleteAccountBtn")?.addEventListener("click", () => {
+    if (confirm("¿Seguro que deseas eliminar tu cuenta?")) {
+      localStorage.removeItem("skylux_user");
+      document.getElementById("userPanel").classList.add("d-none");
+      alert("Cuenta eliminada.");
+    }
+  });
+
 });
 
+
+
+
 function agregarReserva(nombre, fecha) {
-    const lista = document.getElementById("listaReservas");
+  const lista = document.getElementById("listaReservas");
 
+  const item = document.createElement("li");
+  item.className = "list-group-item d-flex justify-content-between align-items-center";
 
-    const item = document.createElement("li");
-    item.className = "list-group-item d-flex justify-content-between align-items-center";
+  item.innerHTML = `
+    <span><strong>${nombre}</strong> - ${fecha}</span>
+    <button class="btn btn-danger btn-sm eliminar-reserva">
+      <i class="bi bi-trash"></i>
+    </button>
+  `;
 
-    item.innerHTML = `
-        <span><strong>${nombre}</strong> - ${fecha}</span>
-        <button class="btn btn-danger btn-sm eliminar-reserva">
-            <i class="bi bi-trash"></i>
-        </button>
-    `;
+  lista.appendChild(item);
 
-    lista.appendChild(item);
-
-  
-    item.querySelector(".eliminar-reserva").addEventListener("click", () => {
-        item.remove();
-    });
+  item.querySelector(".eliminar-reserva").addEventListener("click", () => {
+    item.remove();
+  });
 }
-
