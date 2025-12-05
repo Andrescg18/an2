@@ -82,18 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (correo === user.correo && pass === user.password) {
+if (correo === user.correo && pass === user.password) {
 
       authModal.hide();
 
-      document.getElementById("userPanel").classList.remove("d-none");
-      document.getElementById("userName").textContent =
-        user.nombres.toUpperCase() + " " + user.apellidos.toUpperCase();
-      document.getElementById("userEmail").textContent = user.correo;
+      // Guardar sesión activa
+      localStorage.setItem("skylux_logged", "true");
 
-    } else {
+      // Redirigir al dashboard
+      window.location.href = "dashboard.html";
+
+} else {
       alert("Credenciales incorrectas.");
-    }
+}
+
   });
 
 
